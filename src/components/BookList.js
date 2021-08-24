@@ -1,7 +1,7 @@
 import React from 'react';
 import Book from './Book';
 
-const Books = () => {
+const BookList = () => {
   const categories = ['Action', 'Economy', 'Science Fiction'];
   const books = [
     {
@@ -52,4 +52,4 @@ const Books = () => {
   );
 };
 
-export default Books;
+export default BookList;
