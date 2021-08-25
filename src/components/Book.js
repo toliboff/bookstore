@@ -1,10 +1,22 @@
 import React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/books';
+
 
 const Book = ({ books }) => {
   const {
     id, category, title, author, progress, currentChapter,
   } = books;
+
+  // const books = useSelector((state) => state.booksReducer);
+  useSelector((state) => state.booksReducer);
+
+  const dispatch = useDispatch();
+
+  const handleRemoveBook = (id) => {
+    dispatch(removeBook(id));
+  };
 
   return (
     <li key={id} className="card">
@@ -14,7 +26,7 @@ const Book = ({ books }) => {
         <span className="author">{author}</span>
         <div className="buttons">
           <button type="button">Comments</button>
-          <button type="button">Remove</button>
+          <button type="button" onClick={() => handleRemoveBook(id)}>Remove</button>
           <button type="button">Edit</button>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addBook, removeBook } from '../redux/books/books';
+import { addBook } from '../redux/books/books';
 
 const AddBook = ({ categories }) => {
   const defaultValues = {
