@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 const Book = ({ books }) => {
   const {
-    id, category, name, author, progress, currentChapter,
+    id, category, title, author, progress, currentChapter,
   } = books;
 
   return (
     <li key={id} className="card">
       <div className="bookInfo">
         <span className="category">{category}</span>
-        <h2>{name}</h2>
+        <h2>{title}</h2>
         <span className="author">{author}</span>
         <div className="buttons">
           <button type="button">Comments</button>
@@ -45,7 +45,7 @@ Book.propTypes = {
   books: PropTypes.shape({
     id: PropTypes.number.isRequired,
     category: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     progress: PropTypes.number.isRequired,
     currentChapter: PropTypes.string.isRequired,
