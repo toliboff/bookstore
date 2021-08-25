@@ -47,7 +47,3 @@ export default AddBook;
 AddBook.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
-
-// categories: PropTypes.arrayOf(PropTypes.shape({
-//   map: PropTypes.func.isRequired,
-// }).isRequired,));

@@ -1,15 +1,13 @@
 import React from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/books';
-
 
 const Book = ({ books }) => {
   const {
     id, category, title, author, progress, currentChapter,
   } = books;
 
-  // const books = useSelector((state) => state.booksReducer);
   useSelector((state) => state.booksReducer);
 
   const dispatch = useDispatch();
