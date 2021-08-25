@@ -6,7 +6,7 @@ const Header = () => (
     <h1>Bookstore CMS</h1>
 
     <ul>
-      <li><Link exact to="/">Books</Link></li>
+      <li><Link to="/">Books</Link></li>
       <li><Link to="/categories">Categories</Link></li>
     </ul>
 
