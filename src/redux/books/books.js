@@ -17,16 +17,16 @@ const createNewApp = async () => {
 
 createNewApp();
 
-// const getAllBooks = async () => {
-//   const books = await fetch(`${baseAPI}/apps/${appId}/books`);
-//   const list = await books.json();
-//   console.log(list);
-// };
+const getAllBooks = async () => {
+  const books = await fetch(`${baseAPI}/apps/${appId}/books`);
+  const list = await books.json();
+  console.log(list);
+};
 
-// getAllBooks();
+getAllBooks();
 
 export const addBook = (payload) => async (dispatch) => {
-  const response = await fetch(`${baseAPI}/apps/${appId}/books`, {
+  await fetch(`${baseAPI}/apps/${appId}/books`, {
     method: 'POST',
     headers: { 'Content-type': 'application/json;charset=UTF-8' },
     body: JSON.stringify({
@@ -36,19 +36,31 @@ export const addBook = (payload) => async (dispatch) => {
     }),
   });
 
-  const res = await response.text();
-  console.log(res);
-
   dispatch({
     type: ADD_BOOK,
     payload,
   });
 };
 
-export const removeBook = (payload) => ({
-  type: REMOVE_BOOK,
-  payload,
-});
+export const removeBook = (payload) => async (dispatch) => {
+  console.log(payload);
+  await fetch(`${baseAPI}/apps/${appId}/books/${String(payload)}`, {
+    method: 'DELETE',
+    headers: { 'Content-type': 'application/json;charset=UTF-8' },
+    body: JSON.stringify({
+      item_id: payload,
+    }),
+  });
+
+  dispatch({
+    type: REMOVE_BOOK,
+    payload,
+  });
+};
+// export const removeBook = (payload) => ({
+//   type: REMOVE_BOOK,
+//   payload,
+// });
 
 // export const fetchBooks = () => ({
 //   type: FETCH_BOOKS,

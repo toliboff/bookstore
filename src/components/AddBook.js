@@ -18,8 +18,9 @@ const AddBook = ({ categories }) => {
   const dispatch = useDispatch();
   const submitBookToStore = (event) => {
     event.preventDefault();
-    const newBook = { ...newBookData, id: Date.now() };
+    const newBook = { ...newBookData, id: String(Date.now()) };
     dispatch(addBook(newBook));
+    setNewBookData(defaultValues);
     event.target.reset();
   };
 
