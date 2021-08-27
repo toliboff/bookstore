@@ -26,11 +26,12 @@ const AddBook = ({ categories }) => {
   };
 
   return (
-    <>
-      <h2>ADD NEW BOOK</h2>
-      <form onSubmit={submitBookToStore}>
-        <input type="text" placeholder="Book title" onInput={handleChange} name="title" required />
-        <select onChange={handleChange} name="category">
+    <div className="add-book">
+      <h2 className="add-book-title">ADD NEW BOOK</h2>
+      <form onSubmit={submitBookToStore} className="flex-row">
+        <input type="text" placeholder="Book title" onInput={handleChange} name="title" required autoComplete="off" />
+        <select onChange={handleChange} name="category" placeholder="hi">
+          <option value="" disabled selected hidden>Category</option>
           {categories.map((category) => (
             <option key={category} value={category}>
               {category}
@@ -39,7 +40,7 @@ const AddBook = ({ categories }) => {
         </select>
         <button type="submit" className="btn">ADD BOOK</button>
       </form>
-    </>
+    </div>
   );
 };
 
