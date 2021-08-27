@@ -5,6 +5,10 @@
 - Add a book.
 - Remove a selected book.
 
+# Screenshot
+![screenshot](screenshot.png)
+
+[Live Demo Link](https://tolibs-bookstore.netlify.app/)
 # Built With
 
 - React

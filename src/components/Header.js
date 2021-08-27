@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => (
-  <div>
+  <div className="header flex-row">
     <h1>Bookstore CMS</h1>
 
-    <ul>
-      <li><Link to="/">Books</Link></li>
-      <li><Link to="/categories">Categories</Link></li>
+    <ul className="menu flex-row">
+      <li><NavLink exact to="/">Books</NavLink></li>
+      <li><NavLink to="/categories">Categories</NavLink></li>
     </ul>
 
-    <div>
+    <div className="avatar">
       <i className="fas fa-user" />
     </div>
   </div>

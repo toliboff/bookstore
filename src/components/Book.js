@@ -20,7 +20,7 @@ const Book = ({ books }) => {
     <li key={id} className="card">
       <div className="bookInfo">
         <span className="category">{category}</span>
-        <h2>{title}</h2>
+        <h2 className="title">{title}</h2>
         <span className="author">{author}</span>
         <div className="buttons">
           <button type="button">Comments</button>
@@ -29,9 +29,14 @@ const Book = ({ books }) => {
         </div>
       </div>
 
-      <div className="progress">
-        <progress value={progress} max="100" />
-        <div className="number-progress">
+      <div className="progress flex-row">
+        <div className="circular">
+          <svg>
+            <circle cx="50" cy="50" r="50" />
+            <circle cx="50" cy="50" r="50" />
+          </svg>
+        </div>
+        <div className="number-progress flex-column">
           <div>
             {progress}
             %
@@ -40,10 +45,10 @@ const Book = ({ books }) => {
         </div>
       </div>
 
-      <div className="current-chapter">
+      <div className="current-chapter flex-column">
         <span>CURRENT CHAPTER</span>
-        <span>{currentChapter}</span>
-        <button type="button">UPDATE PROGRESS</button>
+        <span className="chapter">{currentChapter}</span>
+        <button type="button" className="btn">UPDATE PROGRESS</button>
       </div>
     </li>
   );
