@@ -1,7 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;400;700&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Slab', serif;
+#e8e8e8 - silver
+#121212 - black
+#0290ff - blue
+#c4c4c4 - placeholder
+ */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  padding: 0 6.25rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #0290ff;
+  font-size: 1.8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #07070781;
+  text-transform: uppercase;
+  margin-left: 2.5rem;
+}
+
+a:hover {
+  color: #121212;
+}
+
+.header {
+  padding: 1.8rem 0;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.active {
+  color: #121212;
+}
+
+.avatar {
+  color: #0290ff;
+  margin-left: auto;
 }
 
 .card {
