@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;400;700&display=swap');
 
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto Slab', serif;
-#e8e8e8 - silver
-#121212 - black
-#0290ff - blue
-#c4c4c4 - placeholder
- */
-
 * {
   margin: 0;
   padding: 0;
@@ -153,7 +145,7 @@ a:hover {
 .add-book {
   border-top: 2px solid #e8e8e8;
   margin: 3rem 6.25rem;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
 }
 
 .add-book-title {
@@ -188,16 +180,31 @@ select {
   color: #12121275;
 }
 
-::-webkit-input-placeholder {
-  /* Edge */
-  color: #b3bac5;
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #b3bac5;
-}
-
 ::placeholder {
   color: #b3bac5;
+}
+
+.circular {
+  width: 120px;
+  height: 120px;
+}
+
+svg {
+  width: 120px;
+  height: 120px;
+}
+
+.circular circle {
+  transform: rotate(-90deg) translate(10px, 10px);
+  transform-origin: center;
+  position: absolute;
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 10px;
+}
+
+.circular circle:nth-child(2) {
+  stroke: #0290ff;
+  stroke-dasharray: 320;
+  stroke-dashoffset: 315;
 }

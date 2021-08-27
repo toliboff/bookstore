@@ -30,7 +30,12 @@ const Book = ({ books }) => {
       </div>
 
       <div className="progress flex-row">
-        <progress value={progress} max="100" />
+        <div className="circular">
+          <svg>
+            <circle cx="50" cy="50" r="50" />
+            <circle cx="50" cy="50" r="50" />
+          </svg>
+        </div>
         <div className="number-progress flex-column">
           <div>
             {progress}
