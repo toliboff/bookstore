@@ -37,7 +37,7 @@ const AddBook = ({ categories }) => {
             </option>
           ))}
         </select>
-        <button type="submit">ADD BOOK</button>
+        <button type="submit" className="btn">ADD BOOK</button>
       </form>
     </>
   );

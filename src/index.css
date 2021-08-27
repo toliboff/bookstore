@@ -13,7 +13,6 @@ font-family: 'Roboto Slab', serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -66,8 +65,76 @@ a:hover {
   margin-left: auto;
 }
 
+.btn {
+  border: none;
+  background-color: #0290ff;
+  cursor: pointer;
+  color: #fff;
+  padding: 0.43rem 1.37rem;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0291ff79;
+}
+
+/* BookList */
 .card {
+  font-family: 'Roboto Slab', serif;
   display: flex;
   justify-content: space-between;
-  margin: 2rem;
+  align-items: center;
+  padding: 1.5rem 2.6rem;
+  font-size: 0.87rem;
+}
+
+.category {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #12121279;
+  font-size: 0.87rem;
+}
+
+.title {
+  font-size: 1.37rem;
+}
+
+.author {
+  color: #4fb1fc;
+}
+
+.buttons {
+  margin: 1.31rem 0;
+}
+
+.buttons button {
+  margin-right: 0.93rem;
+  color: #4fb1fc;
+  border: none;
+  cursor: pointer;
+  font-family: 'Roboto Slab', serif;
+  background-color: transparent;
+}
+
+.progress {
+  align-items: center;
+}
+
+.number-progress {
+  font-size: 2rem;
+}
+
+.number-progress span {
+  font-size: 0.87rem;
+  color: #12121275;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.current-chapter {
+  color: #12121275;
+}
+
+.chapter {
+  margin: 0.5rem 0;
+  color: #121212;
 }
