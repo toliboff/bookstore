@@ -6,6 +6,7 @@ import { addBook } from '../redux/books/books';
 const AddBook = ({ categories }) => {
   const defaultValues = {
     category: 'Action',
+    author: 'SomeOne',
     progress: 0,
     currentChapter: 'Introduction',
   };
@@ -29,7 +30,6 @@ const AddBook = ({ categories }) => {
       <h2>ADD NEW BOOK</h2>
       <form onSubmit={submitBookToStore}>
         <input type="text" placeholder="Book title" onInput={handleChange} name="title" required />
-        <input type="text" placeholder="Author" onInput={handleChange} name="author" required />
         <select onChange={handleChange} name="category">
           {categories.map((category) => (
             <option key={category} value={category}>
