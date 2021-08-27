@@ -5,6 +5,8 @@
 - Add a book.
 - Remove a selected book.
 
+# Screenshot
+![screenshot](screenshot.png)
 # Built With
 
 - React
