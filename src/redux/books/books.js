@@ -58,7 +58,6 @@ export const fetchBook = () => async (dispatch) => {
   const books = await fetch(`${baseAPI}/apps/${appId}/books`);
   const booksObj = await books.json();
   const list = Object.keys(booksObj);
-  console.log('List of books:', list);
   const fetchedBooks = [];
 
   list.map((book) => fetchedBooks.push({
